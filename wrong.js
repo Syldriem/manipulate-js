@@ -1,0 +1,27 @@
+const loga = document.body.querySelector("p.logo-text")
+loga.setAttribute("style", "color: #384241");
+const header = document.body.querySelector("header");
+header.setAttribute("style", "display: flex; align-items: center; justify-content: start; border-bottom: 1px solid lightgray");
+const recipeName = document.getElementById("recipe-name");
+recipeName.innerText = "Frozen Cheesecake";
+const timer = document.body.querySelector("div.time-container").firstElementChild;
+timer.classList.add("material-icons");
+const timeText = document.body.querySelector("span.time");
+timeText.innerText = "60 min";
+const img = document.body.querySelector("img");
+img.src = "./assets/frozen-cheesecake-slice.jpg";
+const ingredients = document.body.querySelector("article.ingredients-container");
+ingredients.setAttribute("style", "background-color: #f9f9f9");
+const ingredientList = ingredients.querySelector("ul.ingredients-list-bottom");
+ingredientList.removeChild(ingredientList.lastElementChild);
+ingredientList.insertAdjacentHTML("afterbegin", "<li>15st digistivetex</li>");
+ingredientList.insertAdjacentHTML("beforeend", "<li>lite smör</li>");
+const ingredientListPaste = ingredients.querySelector("ul.ingredients-list-paste");
+ingredientListPaste.children[2].innerText = "3tsk vaniljsocker";
+ingredientListPaste.insertAdjacentHTML("beforeend", "<li>400g naturell philadelphiaost</li>");
+const instructions = document.body.querySelector("h3.instructions");
+instructions.classList.remove("shadow");
+const olList = document.body.querySelector("ol.instructions-list").children[8];
+olList.innerText = "Ställ in i frysen över natten";
+const olTwo = document.body.querySelector("ol.instructions-list").children[1];
+olTwo.innerText = "Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.";
